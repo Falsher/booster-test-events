@@ -9,4 +9,4 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"handlebars/dist/handlebars.runtime":"pAws"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=t(require("./temlates/event.hbs"));function t(e){return e&&e.__esModule?e:{default:e}}const n=document.querySelector(".input"),o=document.querySelector(".list-allExecutor");function s(t){const n=t.target.value;console.log(n),fetch(`https://app.ticketmaster.com/discovery/v2/events.json?keyword=${n}&source=universe&countryCode=US&apikey=GRPbY9DCa4eo82JvpPxXBkSp102AnOHv`).then(e=>e.json()).then(({_embedded:t})=>{console.log(t);const n=function(t){return(0,e.default)(t)}(t);o.insertAdjacentHTML("afterbegin",n)})}n.addEventListener("input",s);
 },{"./sass/main.scss":"clu1","./temlates/event.hbs":"tJQ5"}]},{},["Focm"], null)
-//# sourceMappingURL=/booster-test-events/src.d91a16cd.js.map
+//# sourceMappingURL=/booster-test-events/src.15dcfd6b.js.map
