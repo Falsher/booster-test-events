@@ -1,22 +1,24 @@
-{{#each this}}
-<li>
+{{#each events}}
+<li class="list-executor">
     <div class="photo-card">
-        <img src="" alt="">
-
-  <div class="info">
-        <p class="stats-item">
-           
-           
-        </p>
-        <p class="stats-item">
-          
-         
-        </p>
-        <p class="stats-item">
+        <div class="box"></div>
+        <picture>{{#each images}}
+            <source srcset="{{url}}" type="">{{/each}}
+            <img class="page-albom" src="{{url}}" alt="name" width="161">
+        </picture>
+    </div>
+    <div class="info">
+        {{#each _embedded.attractions}} <h2 class="name-albom">
+            {{name}}
+        </h2>{{/each}}
+        {{#each dates}} <p class="album-release-date">
+            {{localDate}}
+        </p>{{/each}}
+        <p class="place-performance">
             <i class="material-icons">room</i>
-          
+            {{dates.timezone}}
         </p>
     </div>
-    </div>
+
 </li>
 {{/each}}
